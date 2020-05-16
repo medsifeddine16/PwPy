@@ -60,14 +60,15 @@ if xyz == 'y' or xyz == 'Y':
 else:
     password_list = words
 
-min_length, max_length = 1, 4
+min_length, max_length = 2, 4
+
+print("\n")
+print('[+] Now making a dictionary...')
+print("[+] Sorting list and removing duplicates...")
 
 for n in range(min_length, max_length+1):
     for xs in itertools.product(password_list, repeat=n):
         print(''.join(xs), file=open("passwords.txt", "a"))
 
-print("\n")
-print('[+] Now making a dictionary...')
-print("[+] Sorting list and removing duplicates...")
 print('[+] Saving dictionary to passwords.txt...')
 print('[+] ! Good luck!')
